@@ -5,10 +5,7 @@ import dsieradzki.pl.travelcost.model.DistanceModel;
 import dsieradzki.pl.travelcost.service.CalculateService;
 import dsieradzki.pl.travelcost.service.DistanceService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -18,10 +15,15 @@ public class DistanceController {
     private final DistanceService distanceService;
     private final CalculateService calculateService;
 
+    @RequestMapping("hi")
+    public String hello(){
+        return "home";
+    }
 
     @GetMapping("/distance")
     public DistanceModel getDistanceBetweenTwoCity(@RequestParam String start,@RequestParam String end) throws Exception {
         return distanceService.getCoordinates(start, end);
+
     }
 
     @CrossOrigin(origins = "*")
