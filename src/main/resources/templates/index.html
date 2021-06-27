@@ -75,7 +75,7 @@
       </div>
       <div class="col-sm-2">
         <h3>Limousine</h3>  
-        <div class="bgi"><img class="img-fluid" src="https://static.wikia.nocookie.net/forzamotorsport/images/c/ce/HOR_XB1_Cadillac_XTS.png/revision/latest/scale-to-width-down/310?cb=20190926194456" alt="Chania"></div>
+        <div class="bgi"><img class="img-fluid" src="https://s1.cdn.autoevolution.com/images/models/AURUS_Senat-Limousine-2018_main.jpg" alt="Chania"></div>
         <div class="form-check text-center">
             <label class="form-check-label">
               <input type="radio" class="form-check-input" value="Limousine" name="type">Wybierz mnie!
@@ -128,7 +128,7 @@ Liczba kilometrów : <span id="distance" + km></span><span> km</span>
 
     $.ajax({
       type: 'GET',
-      url: 'http://localhost:8080/cost?start=' + $('input[name="start"]').val() + '&end='+ $('input[name="end"]').val() +'&type=' + $('input[name="type"]:checked').val(),
+      url: 'http://travelcost.herokuapp.com/cost?start=' + $('input[name="start"]').val() + '&end='+ $('input[name="end"]').val() +'&type=' + $('input[name="type"]:checked').val(),
       beforeSend: function(xhr) {
        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
        xhr.setRequestHeader("Content-Type", "application/json");
