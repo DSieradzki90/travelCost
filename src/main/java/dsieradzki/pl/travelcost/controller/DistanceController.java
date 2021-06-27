@@ -15,11 +15,6 @@ public class DistanceController {
     private final DistanceService distanceService;
     private final CalculateService calculateService;
 
-    @RequestMapping("hi")
-    public String hello(){
-        return "home";
-    }
-
     @GetMapping("/distance")
     public DistanceModel getDistanceBetweenTwoCity(@RequestParam String start,@RequestParam String end) throws Exception {
         return distanceService.getCoordinates(start, end);
