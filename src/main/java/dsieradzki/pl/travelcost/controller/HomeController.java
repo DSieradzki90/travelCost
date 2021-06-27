@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 public class HomeController {
-    @Value("${travelcost}")
+    @Value("${spring.application.name}")
     String appName;
 
     @GetMapping("/home")
