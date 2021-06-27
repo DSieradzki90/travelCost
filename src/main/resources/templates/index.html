@@ -128,7 +128,7 @@ Liczba kilometrów : <span id="distance" + km></span><span> km</span>
 
     $.ajax({
       type: 'GET',
-      url: 'http://travelcost.herokuapp.com/cost?start=' + $('input[name="start"]').val() + '&end='+ $('input[name="end"]').val() +'&type=' + $('input[name="type"]:checked').val(),
+      url: 'https://travelcost.herokuapp.com/cost?start=' + $('input[name="start"]').val() + '&end='+ $('input[name="end"]').val() +'&type=' + $('input[name="type"]:checked').val(),
       beforeSend: function(xhr) {
        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
        xhr.setRequestHeader("Content-Type", "application/json");
