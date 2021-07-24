@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 public class TravelCostClient {
 
     private final String GEOCODE = "https://maps.googleapis.com/maps/api/distancematrix/";
-    private final String API_KEY = "AIzaSyAHLJWrtEk9bMHVIUILYW7A-BPEEw3XmMM";
+    private final String API_KEY = "API_KEY";
 
     private RestTemplate restTemplate = new RestTemplate();
 
